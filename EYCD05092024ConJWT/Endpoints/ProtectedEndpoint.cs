@@ -24,8 +24,11 @@
             {
                 //Agrega un nuevo objeto anonimo con 'name' y 'lastName' a la 
                 //lista 'data' en respusta a una solicitud POST 
-                data.Add(new {name, lastNmae});
-            })
+                data.Add(new { name, lastNmae });
+
+                //Devuelve una respuesta HTTP exitosa (200 Ok) para indicar que 
+                //la operacion se ha completado con exito.
+            }).RequireAuthorization(); //requiere que el usario este autenticado para acceder a esta ruta.
         }
     }
 }
